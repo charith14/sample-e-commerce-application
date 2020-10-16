@@ -165,6 +165,11 @@
     <Content Include="Views\Rent\Details.cshtml" />
     <Content Include="Views\Rent\Delete.cshtml" />
     <Content Include="Views\Rent\Edit.cshtml" />
+    <Content Include="Views\Owner\Index.cshtml" />
+    <Content Include="Views\Owner\Create.cshtml" />
+    <Content Include="Views\Owner\Details.cshtml" />
+    <Content Include="Views\Owner\Edit.cshtml" />
+    <Content Include="Views\Owner\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -175,7 +180,6 @@
   <ItemGroup>
     <Folder Include="Views\Branch\" />
     <Folder Include="Views\Home\" />
-    <Folder Include="Views\Owner\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202010151607124_ecom.resx">
