@@ -15,13 +15,15 @@ namespace sample_e_commerce_application.Models
         [Display(Name = "Staff ID number")]
         public String StaffNo { get; set; }
 
+        [Display(Name = "First Name")]
         public String Fname { get; set; }
 
+        [Display(Name = "Last Name")]
         public String Lname { get; set; }
 
         public String Position { get; set; }
 
-
+        [Display(Name = "Date of birth")]
         [DataType(DataType.Date)]
         public DateTime DOB { get; set; }
 

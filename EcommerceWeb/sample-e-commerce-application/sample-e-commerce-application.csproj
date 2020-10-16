@@ -138,6 +138,10 @@
     <Compile Include="Migrations\202010151607124_ecom.designer.cs">
       <DependentUpon>202010151607124_ecom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010160834535_ecom1.cs" />
+    <Compile Include="Migrations\202010160834535_ecom1.Designer.cs">
+      <DependentUpon>202010160834535_ecom1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\EcomContext.cs" />
@@ -156,6 +160,11 @@
     <Content Include="Views\Staff\Details.cshtml" />
     <Content Include="Views\Staff\Edit.cshtml" />
     <Content Include="Views\Staff\Delete.cshtml" />
+    <Content Include="Views\Rent\Index.cshtml" />
+    <Content Include="Views\Rent\Create.cshtml" />
+    <Content Include="Views\Rent\Details.cshtml" />
+    <Content Include="Views\Rent\Delete.cshtml" />
+    <Content Include="Views\Rent\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -167,11 +176,13 @@
     <Folder Include="Views\Branch\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Owner\" />
-    <Folder Include="Views\Rent\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202010151607124_ecom.resx">
       <DependentUpon>202010151607124_ecom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010160834535_ecom1.resx">
+      <DependentUpon>202010160834535_ecom1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
