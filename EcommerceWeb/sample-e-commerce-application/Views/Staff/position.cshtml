@@ -1,0 +1,49 @@
+﻿@model IEnumerable<sample_e_commerce_application.Models.Staff>
+@using sample_e_commerce_application.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>position</title>
+</head>
+<body>
+    <div> 
+        <h1>Position Names</h1>
+        @{
+            int x = 0;
+            int y = 0;
+
+
+            foreach (Staff staff in Model)
+            {
+                x = x + 1;
+
+            }
+
+            string[] pos = new string[x];
+
+            foreach (Staff staff in Model)
+            {
+                pos[y] = staff.Position;
+                y = y + 1;
+
+            }
+
+            var distinctArray = pos.Distinct().ToArray();
+
+            foreach (string i in distinctArray)
+            {
+                <h3>@Html.ActionLink(i, "position1", new { pos = i })</h3>
+            }
+
+
+        }
+    </div>
+</body>
+</html>

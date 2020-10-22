@@ -1,0 +1,23 @@
+﻿@model IEnumerable<sample_e_commerce_application.Models.Branch>
+@using sample_e_commerce_application.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Branch</title>
+</head>
+<body>
+    <div> 
+        @foreach (Branch branch in Model)
+        {
+           <h3>@Html.ActionLink(branch.Street, "branch1", new { id = branch.BranchNo })</h3>
+        }
+    </div>
+</body>
+</html>

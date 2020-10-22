@@ -1,0 +1,50 @@
+﻿@model IEnumerable<sample_e_commerce_application.Models.Rent>
+@using sample_e_commerce_application.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>city</title>
+</head>
+<body>
+    
+
+    <h1>City Names</h1>
+    @{
+        int x = 0;
+        int y = 0;
+
+
+        foreach (Rent rent in Model)
+        {
+            x = x + 1;
+
+        }
+
+        string[] pos = new string[x];
+
+        foreach (Rent rent in Model)
+        {
+            pos[y] = rent.City;
+            y = y + 1;
+
+        }
+
+        var distinctArray = pos.Distinct().ToArray();
+
+        foreach (string i in distinctArray)
+        {
+            <h3>@Html.ActionLink(i, "city1", new { cy = i })</h3>
+        }
+
+
+    }
+
+</body>
+</html>

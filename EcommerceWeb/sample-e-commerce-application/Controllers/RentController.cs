@@ -81,5 +81,20 @@ namespace sample_e_commerce_application.Controllers
             ecomContext.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult city()
+        {
+
+            var Allcity = ecomContext.Rents.ToList();
+
+
+            return View(Allcity);
+        }
+
+        public ActionResult city1(string cy)
+        {
+            List<Rent> rent = ecomContext.Rents.Where(x => x.City == cy).ToList();
+            return View(rent);
+        }
     }
 }

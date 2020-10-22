@@ -62,8 +62,8 @@ namespace sample_e_commerce_application.Controllers
 
         public ActionResult Delete(String id)
         {
-            Staff employee = ecomContext.Staffs.SingleOrDefault(x => x.StaffNo == id);
-            return View(employee);
+            Staff staff = ecomContext.Staffs.SingleOrDefault(x => x.StaffNo == id);
+            return View(staff);
         }
 
         [HttpPost, ActionName("Delete")]
@@ -73,6 +73,26 @@ namespace sample_e_commerce_application.Controllers
             ecomContext.Staffs.Remove(staff);
             ecomContext.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult position()
+        {
+
+            var AllStaff = ecomContext.Staffs.ToList();
+
+            // var AllStaff = ecomContext.Staffs.GroupBy(user => user.Position).First().ToList();
+
+           // List<Staff>  AllStaff = ecomContext.Staffs.GroupBy(x => x.Position).SingleOrDefault().ToList();
+
+           // ViewBag.ss = AllStaff;
+
+            return View(AllStaff);
+        }
+
+        public ActionResult position1(string pos)
+        {
+            List<Staff> staff = ecomContext.Staffs.Where(x => x.Position == pos).ToList();
+            return View(staff);
         }
     }
 }

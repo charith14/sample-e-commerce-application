@@ -72,5 +72,20 @@ namespace sample_e_commerce_application.Controllers
             ecomContext.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Branch()
+        {
+            List<Branch> AllBranch = ecomContext.Branches.ToList();
+            return View(AllBranch);
+        }
+
+        public ActionResult Branch1(String id)
+        {
+            // List<Rent> rent = ecomContext.Rents.Where(x => x.BranchNoRef == id).ToList();
+
+            var rent = ecomContext.Rents.Where(x => x.BranchNoRef == id).ToList().Count();
+            ViewBag.count = rent;
+            return View();
+        }
     }
 }

@@ -175,6 +175,13 @@
     <Content Include="Views\Branch\Details.cshtml" />
     <Content Include="Views\Branch\Create.cshtml" />
     <Content Include="Views\Branch\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Staff\position1.cshtml" />
+    <Content Include="Views\Rent\city.cshtml" />
+    <Content Include="Views\Rent\city1.cshtml" />
+    <Content Include="Views\Staff\position.cshtml" />
+    <Content Include="Views\Branch\Branch.cshtml" />
+    <Content Include="Views\Branch\Branch1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -182,9 +189,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Home\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202010151607124_ecom.resx">
       <DependentUpon>202010151607124_ecom.cs</DependentUpon>
