@@ -17,28 +17,9 @@
 
     <h1>City Names</h1>
     @{
-        int x = 0;
-        int y = 0;
+       
 
-
-        foreach (Rent rent in Model)
-        {
-            x = x + 1;
-
-        }
-
-        string[] pos = new string[x];
-
-        foreach (Rent rent in Model)
-        {
-            pos[y] = rent.City;
-            y = y + 1;
-
-        }
-
-        var distinctArray = pos.Distinct().ToArray();
-
-        foreach (string i in distinctArray)
+        foreach (string i in ViewBag.city)
         {
             <h3>@Html.ActionLink(i, "city1", new { cy = i })</h3>
         }

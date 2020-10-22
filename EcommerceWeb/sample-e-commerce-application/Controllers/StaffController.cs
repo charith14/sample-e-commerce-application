@@ -82,11 +82,33 @@ namespace sample_e_commerce_application.Controllers
 
             // var AllStaff = ecomContext.Staffs.GroupBy(user => user.Position).First().ToList();
 
-           // List<Staff>  AllStaff = ecomContext.Staffs.GroupBy(x => x.Position).SingleOrDefault().ToList();
+            // List<Staff>  AllStaff = ecomContext.Staffs.GroupBy(x => x.Position).SingleOrDefault().ToList();
 
-           // ViewBag.ss = AllStaff;
+            // ViewBag.ss = AllStaff;
 
-            return View(AllStaff);
+            int x = 0;
+            int y = 0;
+
+
+            foreach (Staff staff in AllStaff)
+            {
+                x = x + 1;
+
+            }
+
+            string[] pos = new string[x];
+
+            foreach (Staff staff in AllStaff)
+            {
+                pos[y] = staff.Position;
+                y = y + 1;
+
+            }
+
+            var distinctArray = pos.Distinct().ToArray();
+            ViewBag.position = distinctArray;
+
+            return View();
         }
 
         public ActionResult position1(string pos)

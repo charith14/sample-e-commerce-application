@@ -88,7 +88,30 @@ namespace sample_e_commerce_application.Controllers
             var Allcity = ecomContext.Rents.ToList();
 
 
-            return View(Allcity);
+            int x = 0;
+            int y = 0;
+
+
+            foreach (Rent rent in Allcity)
+            {
+                x = x + 1;
+
+            }
+
+            string[] pos = new string[x];
+
+            foreach (Rent rent in Allcity)
+            {
+                pos[y] = rent.City;
+                y = y + 1;
+
+            }
+
+            var distinctArray = pos.Distinct().ToArray();
+            ViewBag.city = distinctArray;
+
+
+            return View();
         }
 
         public ActionResult city1(string cy)
