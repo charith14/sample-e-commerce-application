@@ -41,7 +41,7 @@ namespace sample_e_commerce_application.Controllers
         public ActionResult Edit(String id)
         {
             Branch branch = ecomContext.Branches.SingleOrDefault(x => x.BranchNo == id);
-            //ViewBag.DeptDetails = new SelectList(ecomContext.Owners, "DeptId", "Name");
+       
             return View(branch);
         }
         [HttpPost]

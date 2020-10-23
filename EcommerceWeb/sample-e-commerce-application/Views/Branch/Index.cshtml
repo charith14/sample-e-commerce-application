@@ -104,9 +104,9 @@
                 </div>
                 <!-- /. ROW  -->
                 <!-- /. ROW  -->
-                ----------------------------------------------------------------------------------------
+        
                 <p>
-                    @Html.ActionLink("Create New", "Create")
+                    <center> @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })</center>
                 </p>
                 <table class="table">
                     <tr>
@@ -135,9 +135,9 @@
                                 @Html.DisplayFor(modelItem => item.PostCode)
                             </td>
                             <td>
-                                @Html.ActionLink("Edit", "Edit", new { id = item.BranchNo }) |
-                                @Html.ActionLink("Details", "Details", new { id = item.BranchNo }) |
-                                @Html.ActionLink("Delete", "Delete", new { id = item.BranchNo })
+                                @Html.ActionLink("Edit", "Edit", new { id = item.BranchNo }, new { @class = "btn btn-success" }) 
+                                @Html.ActionLink("Details", "Details", new { id = item.BranchNo }, new { @class = "btn btn-warning" }) 
+                                @Html.ActionLink("Delete", "Delete", new { id = item.BranchNo }, new { @class = "btn btn-danger" })
                             </td>
                         </tr>
                     }

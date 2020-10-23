@@ -105,9 +105,9 @@
                 </div>
                 <!-- /. ROW  -->
                 <!-- /. ROW  -->
-                ----------------------------------------------------------------------------------------
+               
                 <p>
-                    @Html.ActionLink("Create New", "Create")
+                    <center> @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })</center>
                 </p>
                 <table class="table">
                     <tr>
@@ -150,9 +150,9 @@
                                 @Html.DisplayFor(modelItem => item.Rent1)
                             </td>
                             <td>
-                                @Html.ActionLink("Edit", "Edit", new { id = item.PropertyNo }) |
-                                @Html.ActionLink("Details", "Details", new { id = item.PropertyNo }) |
-                                @Html.ActionLink("Delete", "Delete", new { id = item.PropertyNo })
+                                @Html.ActionLink("Edit", "Edit", new { id = item.PropertyNo }, new { @class = "btn btn-success" }) 
+                                @Html.ActionLink("Details", "Details", new { id = item.PropertyNo }, new { @class = "btn btn-warning" }) 
+                                @Html.ActionLink("Delete", "Delete", new { id = item.PropertyNo }, new { @class = "btn btn-danger" })
                             </td>
                         </tr>
                     }
