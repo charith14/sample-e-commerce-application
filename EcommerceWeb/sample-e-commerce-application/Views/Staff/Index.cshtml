@@ -34,17 +34,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
-                        <img src="~/Content/assets/img/logo.png" />
-
-                    </a>
+                  
 
                 </div>
 
-                <span class="logout-spn">
-                    <a href="#" style="color:#fff;">LOGOUT</a>
-
-                </span>
+               
             </div>
         </div>
         <!-- /. NAV TOP  -->
@@ -56,31 +50,31 @@
 
                     <li class="active-link">
 
-                        <h3 class="fa fa-desktop ">@Html.ActionLink("Staff", "Index", "Staff") </h3>
+                        <h3 class="fa fa-desktop ">@Html.ActionLink("Staff", "Index", "Staff",null, new { style = "text-decoration:none;" }) </h3>
                     </li>
 
 
                     <li>
-                        <h3 class="fa fa-table ">@Html.ActionLink("Branch", "Index", "Branch") </h3>
+                        <h3 class="fa fa-table ">@Html.ActionLink("Branch", "Index", "Branch", null, new { style = "text-decoration:none;" }) </h3>
                     </li>
                     <li>
-                        <h3 class="fa fa-edit ">@Html.ActionLink("buildings", "Index", "Rent") </h3>
-                    </li>
-
-
-                    <li>
-                        <h3 class="fa fa-qrcode ">@Html.ActionLink("Owner", "Index", "Owner") </h3>
+                        <h3 class="fa fa-edit ">@Html.ActionLink("buildings", "Index", "Rent", null, new { style = "text-decoration:none;" }) </h3>
                     </li>
 
 
                     <li>
-                        <h3 class="fa fa-desktop ">@Html.ActionLink("Staff based on position", "position", "Staff") </h3>
+                        <h3 class="fa fa-qrcode ">@Html.ActionLink("Owner", "Index", "Owner", null, new { style = "text-decoration:none;" }) </h3>
+                    </li>
+
+
                     <li>
-                        <h3 class="fa fa-qrcode ">@Html.ActionLink("Buildings based on City", "city", "Rent") </h3>
+                        <h3 class="fa fa-desktop ">@Html.ActionLink("Staff based on position", "position", "Staff", null, new { style = "text-decoration:none;" }) </h3>
+                    <li>
+                        <h3 class="fa fa-qrcode ">@Html.ActionLink("Buildings based on City", "city", "Rent", null, new { style = "text-decoration:none;" }) </h3>
                     </li>
 
                     <li>
-                        <h3 class="fa fa-table " ">@Html.ActionLink("Number of buildings", "Branch", "Branch") </h3>
+                        <h3 class="fa fa-table " ">@Html.ActionLink("Number of buildings", "Branch", "Branch", null, new { style = "text-decoration:none;" }) </h3>
                     </li>
 
                     <li>
